@@ -1,0 +1,7 @@
+{
+  "name": "moovup-friends",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

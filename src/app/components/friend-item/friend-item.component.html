@@ -1,0 +1,27 @@
+<ion-card>
+  <ion-item button
+    *ngIf="!canShowDetail"
+    disabled
+  >
+    <ion-thumbnail slot="start">
+      <ion-img [src]="item.picture"></ion-img>
+    </ion-thumbnail>
+    <ion-label>
+      <h2>{{item.name.first}}</h2>
+      <h2>{{item.name.last}}</h2>
+    </ion-label>  
+  </ion-item>
+
+  <ion-item button
+    *ngIf="canShowDetail"
+    (click)="showDetail()"
+  >
+    <ion-thumbnail slot="start">
+      <ion-img [src]="item.picture"></ion-img>
+    </ion-thumbnail>
+    <ion-label>
+      <h2>{{item.name.first}}</h2>
+      <h2>{{item.name.last}}</h2>
+    </ion-label>  
+  </ion-item>
+</ion-card>

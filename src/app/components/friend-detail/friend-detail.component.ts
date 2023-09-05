@@ -4,6 +4,7 @@ import {
   AfterViewInit,
   Input,
 } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 import { latLng, LatLng, tileLayer, Map, marker, icon, Icon } from 'leaflet';
 
 import { IFriend } from '../../models/friend.interface';
@@ -21,7 +22,9 @@ export class FriendDetailComponent  implements OnInit, AfterViewInit {
 
   private map?: Map;
 
-  constructor() { }
+  constructor(
+    private modalController: ModalController,
+  ) { }
 
   ngOnInit() {
     let layer = marker([ this.item.location.latitude, this.item.location.longitude ], {
@@ -55,5 +58,9 @@ export class FriendDetailComponent  implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.map?.invalidateSize();
     }, 100);
+  }
+
+  back() {
+    this.modalController.dismiss();
   }
 }

@@ -14,7 +14,7 @@ export class FriendsEndPointService {
   getFriendList(): Observable<IFriend[]> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': `Bearer vza4lbzrzy3cyhg4nbzyjhmqzjlqr2p3qibd9986`,
+      'Authorization': `Bearer b2atclr0nk1po45amg305meheqf4xrjt9a1bo410`,
     });
 
     return this.http.get<IFriend[]>(
